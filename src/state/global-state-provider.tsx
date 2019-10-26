@@ -1,11 +1,11 @@
-import * as React from 'react';
+import * as React from "react";
 
 import {
   GlobalDispatchContext,
   GlobalStateContext,
   reducer,
   initialState,
-} from './reducers';
+} from "./reducers";
 
 // tslint:disable-next-line: variable-name
 export const GlobalStateProvider: React.FunctionComponent = ({ children }) => {

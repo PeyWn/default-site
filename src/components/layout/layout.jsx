@@ -1,7 +1,9 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+import { GlobalThemeProvider } from "../../state/global-theme-provider";
 
 export const Layout = ({ children }) => {
-  return <div>{children}</div>
-}
+  return <GlobalThemeProvider>{children}</GlobalThemeProvider>;
+};
 
-export default Layout
+export default Layout;

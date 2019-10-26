@@ -6,6 +6,7 @@ import {
   reducer,
   initialState,
 } from "./reducers";
+import { Box } from "@theme-ui/components";
 
 // tslint:disable-next-line: variable-name
 export const GlobalStateProvider: React.FunctionComponent = ({ children }) => {
@@ -14,7 +15,15 @@ export const GlobalStateProvider: React.FunctionComponent = ({ children }) => {
   return (
     <GlobalDispatchContext.Provider value={dispatch}>
       <GlobalStateContext.Provider value={state}>
-        {children}
+        <Box
+          sx={{
+            body: {
+              margin: 0,
+            },
+          }}
+        >
+          {children}
+        </Box>
       </GlobalStateContext.Provider>
     </GlobalDispatchContext.Provider>
   );
